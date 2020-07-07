@@ -58,8 +58,8 @@ public class main {
         //System.out.println("Time of shellSort = " + sortTime);
 
         // shuttleSort
-        //long sortTime = shuttleSort(ints);
-        //System.out.println("Time of shuttleSort = " + sortTime);
+        long sortTime = shuttleSort(ints);
+        System.out.println("Time of shuttleSort = " + sortTime);
         
         long startTime = System.currentTimeMillis();
         Arrays.sort(ints);
