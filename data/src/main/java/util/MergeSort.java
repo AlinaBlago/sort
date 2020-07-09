@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static long mergeSort(int[] a, int n) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         if (n < 2) {
             return System.currentTimeMillis() - startTime;
         }
@@ -23,7 +23,7 @@ public class MergeSort {
         mergeSort(r, n - mid);
 
         merge(a, l, r, mid, n - mid);
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
 
         return endTime - startTime;
     }
@@ -46,10 +46,6 @@ public class MergeSort {
         while (j < right) {
             a[k++] = r[j++];
         }
-
-
-        System.out.println(Arrays.toString(a));
-
     }
 
 

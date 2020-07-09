@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SelectionSort {
 
     public static long selectionSort(int[] array) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
             int minId = i;
@@ -20,9 +20,7 @@ public class SelectionSort {
             array[i] = min;
             array[minId] = temp;
         }
-        long endTime = System.currentTimeMillis();
-        System.out.println(Arrays.toString(array));
-
+        long endTime = System.nanoTime();
         return endTime - startTime;
     }
 }

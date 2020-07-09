@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static long bubbleSort(int[] array) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         boolean sorted = false;
         int temp;
         while(!sorted) {
@@ -19,9 +19,7 @@ public class BubbleSort {
                 }
             }
         }
-
-        long endTime = System.currentTimeMillis();
-        System.out.println(Arrays.toString(array));
+        long endTime = System.nanoTime();
         return endTime - startTime;
     }
 }

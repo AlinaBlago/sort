@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ShellSort {
 
     public static long shellSort(int[] array) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         // Высчитываем промежуток между проверяемыми элементами
         int gap = array.length / 2;
 // Пока разница между элементами есть
@@ -25,8 +25,7 @@ public class ShellSort {
             // Пересчитываем разрыв
             gap = gap / 2;
         }
-        long endTime = System.currentTimeMillis();
-        System.out.println(Arrays.toString(array));
+        long endTime = System.nanoTime();
 
         return endTime - startTime;
     }

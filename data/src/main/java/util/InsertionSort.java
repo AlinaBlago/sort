@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class InsertionSort {
 
     public static long insertionSort(int[] array) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         for (int i = 1; i < array.length; i++) {
             int current = array[i];
             int j = i - 1;
@@ -16,8 +16,7 @@ public class InsertionSort {
             array[j+1] = current;
         }
 
-        long endTime = System.currentTimeMillis();
-        System.out.println(Arrays.toString(array));
+        long endTime = System.nanoTime();
 
         return endTime - startTime;
     }

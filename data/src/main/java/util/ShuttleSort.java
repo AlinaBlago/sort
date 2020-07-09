@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class ShuttleSort {
 
     public static long shuttleSort(int[] array) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
 
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[i - 1]) {
@@ -26,9 +26,7 @@ public class ShuttleSort {
                 }
             }
         }
-        long endTime = System.currentTimeMillis();
-        System.out.println(Arrays.toString(array));
-
+        long endTime = System.nanoTime();
         return endTime - startTime;
     }
 }
